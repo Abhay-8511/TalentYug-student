@@ -1682,6 +1682,11 @@ border-radius:0;
 .logo span{
 font-size:19px;
 }
+nav{
+top:100%;   
+left:0;
+width:100%;
+}
 .nav-area{
 display:flex;
 align-items:center;
@@ -1927,7 +1932,7 @@ gap:30px;
 flex-wrap:nowrap;
 }
 .testimonial-item{
-flex-wrap:nowrap;
+flex:0 0 85%;
 scroll-snap-align:center;
 }
 .testimonial-cards-wrapper::-webkit-scrollbar{
@@ -2731,14 +2736,11 @@ window.addEventListener("scroll", () => {
 
 });
 
-
-
 const cardsContainer = document.querySelector(".testimonial-cards");
 const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 const pageNumber = document.querySelector(".page-number");
 const totalPagesText = document.querySelector(".total-pages");
-
 const cards = document.querySelectorAll(".testimonial-item");
 const visibleCards = 1;
 
@@ -2748,14 +2750,32 @@ const totalPages = Math.ceil(cards.length / visibleCards);
 totalPagesText.innerText = totalPages.toString().padStart(2,"0");
 
 function updateSlider(){
+  if(window.innerWidth <= 500) return; 
   const cardWidth = cards[0].offsetWidth + 30;
   const offset = currentIndex * cardWidth * visibleCards;
-
   cardsContainer.style.transform = `translateX(-${offset}px)`;
   pageNumber.innerText = (currentIndex + 1).toString().padStart(2,"0");
 }
 
+const wrapper = document.querySelector(".testimonial-cards-wrapper");
+
+let isScrolling;
+wrapper.addEventListener("scroll", () => {
+  if(window.innerWidth > 500) return;
+
+  clearTimeout(isScrolling);
+
+  isScrolling = setTimeout(() => {
+    const cardWidth = cards[0].offsetWidth + 30;
+    const index = Math.round(wrapper.scrollLeft / cardWidth);
+
+    currentIndex = index;
+    pageNumber.innerText = (currentIndex + 1).toString().padStart(2,"0");
+  }, 100);
+});
+
 next.addEventListener("click", ()=>{
+  if(window.innerWidth <= 500) return;
   if(currentIndex < totalPages - 1){
     currentIndex++;
     updateSlider();
@@ -2763,6 +2783,7 @@ next.addEventListener("click", ()=>{
 });
 
 prev.addEventListener("click", ()=>{
+  if(window.innerWidth <= 500) return;
   if(currentIndex > 0){
     currentIndex--;
     updateSlider();
