@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Hire pre-filtered talent from Tier 2 and Tier 3 colleges. Faster hiring. Smarter campus recruitment with TalentYug.">
 
-<title>TalentYug-Students</title>
+<title>TalentYug-Colleges</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +32,7 @@ overflow-x:hidden;
 
 body {
   font-family: 'Geist', sans-serif;
-  background: #FEF2F2;
+  background: #FEF2DD;
   overflow-x: hidden;
 }
 
@@ -48,7 +48,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #FEF2F2;
+  background: #FFFAF6;
   backdrop-filter: blur(12px);
   transition:padding .35s ease,
   max-width .35s ease,
@@ -61,7 +61,7 @@ max-width:92%;
 padding:12px 18px;
 border-radius:50px;
 backdrop-filter:blur(14px);
-background:rgba(254,242,242,0.9);
+background: rgba(254, 242, 221, 0.9);
 box-shadow:0 15px 40px rgba(0,0,0,0.2);
 }
 
@@ -98,8 +98,8 @@ nav a {
 
 .login-btn {
   padding:10px 26px;
-white-space:nowrap;
-  border: 1px solid #7E0000;
+  white-space:nowrap;
+  border: 1px solid #FF9700;
   background: transparent;
   border-radius: 30px 30px 0 30px;
   cursor: pointer;
@@ -108,12 +108,11 @@ white-space:nowrap;
 
 .register-btn {
   padding:10px 26px;
-white-space:nowrap;
-  background: #7E0000;
+  white-space:nowrap;
+  background: #FF9700;
   margin-left: 0px;
-
+  border: 1px solid #2180A8;
   color: #fff;
-  border: none;
   border-radius: 30px 30px 30px 0;
   cursor: pointer;
 }
@@ -141,7 +140,7 @@ transition:0.3s;
 .hero {
   position: relative;
   z-index: 5; 
-  background: #FEF2F2;
+  background: #FFFAF6;
   width: 100%;
   max-width: 1728px;
   margin: auto;
@@ -154,59 +153,99 @@ transition:0.3s;
 .hero::after{
   content:"";
   position:absolute;
-  right:30px;
-  top:120px;
-  width:900px;
-  height:650px;
-
-  background:#DB7B7B;
-
-  filter:blur(70px);
-  opacity:0.2;
+  left: 300px;
+  top:100px;
+  width:600px;
+  height:500px;
+  background:#FAD075;
+  filter:blur(100px);
+  opacity:0.3;
   border-radius:50%;
-
   z-index:11;
 }
 
 .hero-left h1 {
-  width: 140%;
+  width: 120%;
   font-size: 60px;
   font-weight: 600;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .gradient-text {
-  background: linear-gradient(0deg, #C80101 6%, #7E0000 78%, #E40101 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+color: #f89d46;
 }
 
 .hero-left p {
-  margin-top: 40px;
+  margin-top: 70px;
   font-size: 25px;
 }
 
 .cta {
   display:inline-block;
-  margin-top: 40px;
+  margin-top: 80px;
   padding: 16px 80px;
-  background: #7E0000;
+  background: #f89d46;
   color: #fff;
   border: none;
   border-radius: 30px;
   text-decoration:none;
-transition:all 0.3s ease;
+  transition:all 0.3s ease;
 }
 
 .cta:hover{
-background:#8e0101;
+background:#e7852a;
 transform:translateY(-2px);
 box-shadow:5px 5px 10px rgba(0,0,0,0.15);
 }
 
-.hero-right img {
-  max-width: 760px;
-  padding-left: 100px;
+.image-marquee {
+  display: flex;
+  gap: 20px;
+  height: 700px;
+  overflow: hidden;
+}
+
+.img-col {
+  width: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.track {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.img-col.down .track {
+  animation: scrollDown 10s linear infinite;
+}
+
+
+.img-col:nth-child(1) .track {
+  animation-duration: 20s  infinite;
+  
+}
+
+.img-col:nth-child(2) .track {
+  animation-duration: 10s  infinite;
+}
+
+.img-col:nth-child(3) .track {
+  animation-duration: 5s  infinite;
+}
+
+
+
+
+@keyframes scrollDown {
+  0% {
+    transform: translate3d(0, -50%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .sticky-marquee-bg {
@@ -215,7 +254,7 @@ box-shadow:5px 5px 10px rgba(0,0,0,0.15);
   top: 11.5vh;
   height: 15vh;
   max-width: 100%;
-  background-color: #EE6983;
+  background-color: #FF9700;
   display: flex;
   align-items:start;
   justify-content: center;
@@ -226,6 +265,7 @@ cursor: pointer;
 .marquee-wrapper{
   max-width: 100%;
   overflow: hidden;
+  
 }
 
 .marquee-track{
@@ -242,8 +282,9 @@ cursor: pointer;
 .marquee-track span {
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 800;
-  color: #7E0101;
+  color: #984A00;
   padding-right: 0px;
+
 }
 
 .marquee-wrapper:hover .marquee-track{
@@ -272,7 +313,7 @@ cursor: pointer;
 .vs-section {
   position: relative;
   z-index: 100;
-  background: #FEF2F2;
+  background: #FEF2DD;
   min-height:0vh;
   max-width: 100%;
   overflow: hidden;
@@ -335,21 +376,26 @@ cursor: pointer;
 .left-dots img, .right-dots img { position: absolute;transform-origin:center;
  transition: all 0.1s linear; }
 
-.ld1{ top:150px; left:230px; max-width:350px;} .ld2{ top:245px; left:300px; max-width: 350px;}
-.ld3{ top:350px; left: 320px; max-width: 280px;} .ld4{ top:465px; left:305px; max-width: 290px;}
-.ld5{ top:570px; left:240px; max-width:350px;}
+.ld1{ top:150px; left:230px; max-width:420px;} 
+.ld2{ top:245px; left:300px; max-width: 290px;}
+.ld3{ top:345px; left: 320px; max-width: 330px;} 
+.ld4{ top:465px; left:305px; max-width: 320px;}
+.ld5{ top:570px; left:250px; max-width:400px;}
 
-.rd1{ top:150px; right:230px; max-width: 370px;} .rd2{ top:245px; right:300px; max-width: 360px;}
-.rd3{ top:360px; right:320px; max-width: 320px;} .rd4{ top:465px; right:305px; max-width: 350px;}
-.rd5{ top:570px; right:240px; max-width: 300px;}
+
+.rd1{ top:150px; right:230px; max-width: 330px;} 
+.rd2{ top:245px; right:295px; max-width: 360px;}
+.rd3{ top:345px; right:320px; max-width: 260px;} 
+.rd4{ top:465px; right:305px; max-width: 290px;}
+.rd5{ top:570px; right:250px; max-width: 355px;}
 
 
 
 .features-section {
   position: relative;
   z-index: 11;
-  padding: 190px 0px 160px;
-  background: #FEF2F2;
+  padding: 210px 0px 160px;
+  background: #FEF2DD;
   height: auto;
 }
  .features-bg{
@@ -359,7 +405,7 @@ cursor: pointer;
   transform: translateX(-50%);
   font-size: 200px;
   font-weight: 700;
-  color:#B44D4D;
+  color:#CFAE74;
   opacity:0.66; 
   pointer-events: none;
   user-select: none;
@@ -411,19 +457,23 @@ cursor: pointer;
   list-style: disc;
   padding-left: 20px;
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 /* ===== COLORS ===== */
 .light-card{
   position: relative;
   height:430px;
-  padding:56px;
+  padding:55px;
   border-radius:28px;
-  background:#EE6983;
-  color: #ffffff;
+  background:#F7E396;
+  color: #987900;
   overflow:hidden;
   box-shadow:0 20px 40px rgba(0,0,0,0.05);
+}
+.light-card h3{
+  color: #000;
+  font-size: 40px;
 }
 .light-card::before{
   content:"";
@@ -433,36 +483,64 @@ cursor: pointer;
   bottom:0;
   left:0;
 
-  background:url("img/iuy0.png") no-repeat right 40px bottom 0px;
-  background-size:200px auto;
-  opacity:0.25;
+  background:url("img/college/std_c.png") no-repeat right 100px bottom 0px;
+  background-size:130px auto;
+  opacity:0.95;
   pointer-events:none;
 }
 
 .lighter-card{
-  background: #FFBABA;
+  background: #FFB976;
+  color: #924700;
+}
+
+.lighter-card h3{
+  color: #000000;
 }
 
 .dark-card{
-  background: #520000;
+  background: #5C3B00;
   color: #ffffff;
+  height: 270px;
 }
 
 .mid-card{
-  background: #FFBABA;
-  color: #6C0202;
-    height:365px;
+  background: #FFB976;
+  color: #5B2D00;
+  height:415px;
+}
+.mid-card h3{
+  color: #8B4400;
+}
+.mid-card ul{
+  font-size: 17px;
+  line-height: 1.3;
+}
+.mid-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
 
+  background:url("img/college/das_c.png") no-repeat right 30px bottom 0px;
+  background-size:220px auto;
+  opacity:0.70;
+  pointer-events:none;
 }
 .teal-card{
-  background: #7E0101;
-  color: #FFA6A6;
-     height:365px;
-
+  background: #FF9F43;
+  color: #3F1F00;
+  height:415px;
+}
+.teal-card h3{
+  font-size: 32px;
+  color: #824100;
 }
 
 .large-card{
-  padding: 70px;
+  padding: 50px;
 }
 
 
@@ -470,7 +548,7 @@ cursor: pointer;
 .process-section{
   position: relative;
   padding: 180px 0;
-  background: #FEF2F2;
+  background: #FEF2DD;
   z-index: 11;
   overflow: hidden;
   height: 1100px;
@@ -553,26 +631,30 @@ cursor: pointer;
   height:24px;
   object-fit: contain;
 }
-.step1 .step-label { background:#BB4D4D; }
-.step2 .step-label { background:#902F2F; }
-.step3 .step-label { background:#BB4D4D; }
-.step4 .step-label { background:#902F2F; }
-.step5 .step-label { background:#BB4D4D; }
-.step6 .step-label { background:#902F2F; }
+.step1 .step-label { background:#98853D; }
+.step2 .step-label { background:#8F5F31; }
+.step3 .step-label { background:#98853D; }
+.step4 .step-label { background:#8F5F31; }
+.step5 .step-label { background:#98853D; }
+.step6 .step-label { background:#8F5F31; }
+.step7 .step-label { background:#98853D; }
 
-.step1 { background: #f66d88; }
-.step2 { background: #FFBABA; }
-.step3 { background: #f66d88; }
-.step4 { background: #FFBABA; }
-.step5 { background: #f66d88; }
-.step6 { background: #FFBABA; }
+.step1 { background: #F7E396; }
+.step2 { background: #FF9F43; }
+.step3 { background: #F7E396; }
+.step4 { background: #FF9F43; }
+.step5 { background: #F7E396; }
+.step6 { background: #FF9F43; }
+.step7 { background: #F7E396; }
+
 
 .step1{ top: 34px; left: 0;}
 .step2{ top: 35px; right: 0%;}
 .step3{ top: 240px; left: 35%;}
-.step4{ top: 470px; left: 0;}
-.step5{ top: 470px; right: 0;}
-.step6{ top: 690px; left: 35%;}
+.step4{ top: 470px; left: 15%;}
+.step5{ top: 470px; right: 17%;}
+.step6{ top: 690px; right: 0%;}
+.step7{ top: 690px; left: 0%;}
 
 .process-lines{
   position: absolute;
@@ -597,7 +679,7 @@ display:none;
   stroke-linecap:round;
 }
 #signalDot{
-  filter: drop-shadow(0 0 6px rgba(243, 22, 66,0.8));
+  filter: drop-shadow(0 0 6px rgba(211, 148, 39, 0.8));
 }
 
 
@@ -605,7 +687,7 @@ display:none;
 .pricing-section{
   position:relative;
   padding:220px 0 160px;
-  background:#FEF2F2;
+  background:#FEF2DD;
   overflow:hidden;
   text-align:center;
   z-index:11;      
@@ -618,7 +700,7 @@ display:none;
   transform:translateX(-50%);
   font-size:200px;
   font-weight:800;
-  color:#B44D4D;  
+  color:#CFAE74;  
   opacity:0.66; 
   white-space:nowrap;
   pointer-events:none;
@@ -640,7 +722,7 @@ display:none;
   max-width:360px;
   background:#ffffff;
   border-radius:38px;
-box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
   overflow:hidden;
   transition:all .35s ease;
 }
@@ -664,20 +746,20 @@ box-shadow: 0 10px 25px rgba(0,0,0,0.12);
   background:#ffffff;
   padding:8px 22px;
   border-radius:40px;
-  font-size:13px;
+  font-size:16px;
   font-weight:600;
   display:inline-block;
   margin-bottom:18px;
 }
 
-.price-top h2{
-  font-size:38px;
+.price-top h3{
+  font-size:32px;
   font-weight:800;
-  margin:10px 0;
+  margin:10px 0px;
 }
 
 .price-sub{
-  font-size:16px;
+  font-size:19px;
   font-weight:500;
   margin-bottom:28px;
 }
@@ -686,15 +768,15 @@ box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 display:inline-block;
 margin-top:10px;
 padding:16px 110px;
-background:#7E0000;
-color:#fff;
+background:#FF9700;
+color:#000000;
 border-radius:30px;
 text-decoration:none;
 transition:all 0.3s ease;
 }
 
 .cta1:hover{
-background:#8e0101;
+background:#e38f12;
 transform:translateY(-2px);
 box-shadow:5px 5px 10px rgba(0,0,0,0.15);
 }
@@ -703,15 +785,15 @@ box-shadow:5px 5px 10px rgba(0,0,0,0.15);
 display:inline-block;
 margin-top:10px;
 padding:16px 95px;
-background:#7E0000;
-color:#fff;
+background:#FF9700;
+color:#000000;
 border-radius:30px;
 text-decoration:none;
 transition:all 0.3s ease;
 }
 
 .cta2:hover{
-background:#8e0101;
+background:#e38f12;
 transform:translateY(-2px);
 box-shadow:5px 5px 10px rgba(0,0,0,0.15);
 }
@@ -720,15 +802,15 @@ box-shadow:5px 5px 10px rgba(0,0,0,0.15);
 display:inline-block;
 margin-top:10px;
 padding:16px 80px;
-background:#7E0000;
-color:#fff;
+background:#ff9700;
+color:#000000;
 border-radius:30px;
 text-decoration:none;
 transition:all 0.3s ease;
 }
 
 .cta3:hover{
-background:#8e0101;
+background:#e38f12;
 transform:translateY(-2px);
 box-shadow:5px 5px 10px rgba(0,0,0,0.15);
 }
@@ -764,24 +846,24 @@ box-shadow:5px 5px 10px rgba(0,0,0,0.15);
 
 
 .mint{
-  background:#EE6983;
-  color: #9F0000;
+  background:#F7E396;
+  color: #000000;
 }
 
 .light-mint{
-  background:#FFBABA;
-  color: #CE0000;
+  background:#FF9F43;
+  color: #000000;
 }
 
 .dark{
-  background:#7E0101;
-  color:#FF6B6B;
+  background:#FFB976;
+  color:#000000;
 }
 
 
 .testimonials-section{
   padding:160px 0;
-  background:#FEF2F2;
+  background:#FEF2DD;
   position:relative;
   height: auto;
   z-index:11;
@@ -796,7 +878,7 @@ box-shadow:5px 5px 10px rgba(0,0,0,0.15);
 
 .small-heading{
   font-size:28px;
-  color:#666;
+  color:#7A7A7A;
 }
 
 .testimonials-header h2{
@@ -972,7 +1054,7 @@ box-shadow:5px 5px 10px rgba(0,0,0,0.15);
 }
 
 .faq-left span{
-  background: linear-gradient(400deg, #7E0101 0%, #FF009B 49%, #790007 100%);
+  background: linear-gradient(410deg, #FF0008 0%, #518300 49%, #009DFF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1067,15 +1149,15 @@ box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 display:inline-block;
 margin-top:10px;
 padding:10px 30px;
-background:#7E0000;
-color:#fff;
+background:#FF9700;
+color:#000000;
 border-radius:30px;
 text-decoration:none;
 transition:all 0.3s ease;
 }
 
 .cta4:hover{
-background:#8e0101;
+background:#e38f12;
 transform:translateY(-2px);
 box-shadow:5px 5px 10px rgba(0,0,0,0.15);
 }
@@ -1088,7 +1170,7 @@ box-shadow:5px 5px 10px rgba(0,0,0,0.15);
   padding-top: 200px;
 }
 .footer{
-  background-color: #FFBABA;
+  background-color: #FEF1DB;
   overflow: hidden;
 }
 .footer-skyline{
@@ -1105,7 +1187,7 @@ box-shadow:5px 5px 10px rgba(0,0,0,0.15);
   max-width: 800px;
   margin: auto;
   padding: 10px 0 40px;
-  color: #f8ffff;
+  color: #7B7B7B;
 }
 .footer-grid{
   display: flex;
@@ -1129,7 +1211,7 @@ box-shadow:5px 5px 10px rgba(0,0,0,0.15);
 .footer-col a,
 .footer-col p{
   font-size: 15px;
-  color: #f8ffff;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -1673,11 +1755,16 @@ justify-content:center;
 @media (max-width: 500px){
   
 
-header,
+header{
+  background: #FFFAF6
+
+}
 header.scrolled{
 max-width:auto;
 padding:14px 16px;
 border-radius:0;
+background: #FEF2DD
+
 }
 .logo span{
 font-size:19px;
@@ -1685,12 +1772,15 @@ font-size:19px;
 nav{
 top:100%;   
 left:0;
+background: #FFFAF6;
 width:100%;
 }
 .nav-area{
 display:flex;
 align-items:center;
 gap:4px;
+
+
 }
 .hamburger{
 display:flex;
@@ -1734,7 +1824,7 @@ text-align: center;
   width:900px;
   height:280px;
 
-  background:#DB7B7B;
+  background:#FAD075;
 
   filter:blur(100px);
   opacity:0.5;
@@ -1754,7 +1844,7 @@ border-radius:30px;
 }
 
 .cta4:hover{
-background:#8e0101;
+background:#e7852a;
 transform:translateY(-2px);
 box-shadow:5px 5px 10px rgba(0,0,0,0.15);
 }
@@ -1767,7 +1857,7 @@ position:sticky;
 top:11.5vh;
 height:10vh;
 width:100%;
-background:#EE6983;
+background:#FF9700;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -1781,6 +1871,7 @@ z-index:1;
 min-height:80vh;
 z-index: 13;
 position:relative;
+background: #FEF2DD;
 z-index:0;
 margin-top:0vh;
 }
@@ -1837,8 +1928,8 @@ text-align: center;
 .features-section {
   position: relative;
   z-index: 11;
-  padding: 60px 0px 80px;
-  background: #FEF2F2;
+  padding: 80px 0px 100px;
+  background: #FEF2DD;
   height: auto;
 }
  .features-bg{
@@ -1846,10 +1937,10 @@ text-align: center;
   top: 0px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 65px;
+  font-size: 85px;
   font-weight: 700;
-  color:#B44D4D;
-  opacity:0.66; 
+  color:#CFAE74;
+  opacity:0.66;
   pointer-events: none;
   user-select: none;
 }
@@ -1860,12 +1951,23 @@ text-align: center;
 .feature-card ul{
   font-size:14px;
 }
-
+.light-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background:url("img/college/std_c.png") no-repeat right 30px bottom 0px;
+  background-size:60px auto;
+  opacity:0.95;
+  pointer-events:none;
+}
 
 .pricing-section{
   position:relative;
   padding:70px 0 70px;
-  background:#FEF2F2;
+  background:#FEF2DD;
   overflow:hidden;
   text-align:center;
   z-index:11;      
@@ -1878,7 +1980,7 @@ text-align: center;
   transform:translateX(-50%);
   font-size:65px;
   font-weight:700;
-  color:#B44D4D;  
+  color:#CFAE74;  
   opacity:0.66; 
   white-space:nowrap;
   pointer-events:none;
@@ -1961,6 +2063,7 @@ transform:translateY(-2px);
 box-shadow:5px 5px 10px rgba(0,0,0,0.15);
 }
 
+
 .footer-grid{
 display:grid;
 grid-template-columns:repeat(1,1fr);
@@ -2006,20 +2109,82 @@ text-align:center;
 
 <section class="hero">
   <div class="hero-left"> 
-    <h1><span>Discover </span><br>
-      <span>Your</span>
-      <span class="gradient-text"><br>Right-Fit Job.</span></h1>
-    <p>Role-Matched Opportunities | 5.5L<br>Average Salary | Interview Prep  </p>
+    <h1><span>Turn Placements </span><br>
+      <span>Into Your</span>
+      <span class="gradient-text"><br>Competitive Advantage.</span></h1>
+    <p>70%+ Placement Success Rate Data-Driven • Scalable Infrastructure</p>
 
-    <a href="register.html" target="_blank" class="cta">Browse Opportunities</a>
+    <a href="register.html" target="_blank" class="cta">Register</a>
 
 
   </div>
-  <div class="hero-right">
-    <img src="img/students/landing.webp" width="760" height="665" alt="Hero Image"  fetchpriority="high"
-  loading="eager"
-  decoding="async">
+ <div class="hero-right">
+  <div class="image-marquee">
+
+    <!-- COLUMN 1 (UP) -->
+    <div class="img-col down">
+      <div class="track">
+        <img src="img/college/landing/1st.webp">
+        <img src="img/college/landing/2nd.webp">
+        <img src="img/college/landing/3rd.webp">
+        <img src="img/college/landing/4th.webp">
+        <img src="img/college/landing/5th.webp">
+
+        <!-- DUPLICATE -->
+        <img src="img/college/landing/1st.webp">
+        <img src="img/college/landing/2nd.webp">
+        <img src="img/college/landing/3rd.webp">
+        <img src="img/college/landing/4th.webp">
+        <img src="img/college/landing/5th.webp">
+      </div>
+    </div>
+
+    <!-- COLUMN 2 (DOWN) -->
+    <div class="img-col down">
+      <div class="track">
+        <img src="img/college/landing/6th.webp">
+        <img src="img/college/landing/7th.webp">
+        <img src="img/college/landing/8th.webp">
+        <img src="img/college/landing/9th.webp">
+        <img src="img/college/landing/10th.webp">
+
+        <!-- DUPLICATE -->
+        <img src="img/college/landing/6th.webp">
+        <img src="img/college/landing/7th.webp">
+        <img src="img/college/landing/8th.webp">
+        <img src="img/college/landing/9th.webp">
+        <img src="img/college/landing/10th.webp">
+      </div>
+    </div>
+
+    <!-- COLUMN 3 (UP) -->
+    <div class="img-col down">
+      <div class="track">
+        <img src="img/college/landing/11th.webp">
+        <img src="img/college/landing/13th.webp">
+        <img src="img/college/landing/14th.webp">
+        <img src="img/college/landing/12th.webp">
+        <img src="img/college/landing/15th.webp">
+
+       
+        <img src="img/college/landing/11th.webp">
+        <img src="img/college/landing/13th.webp">
+        <img src="img/college/landing/14th.webp">
+        <img src="img/college/landing/12th.webp">
+        <img src="img/college/landing/15th.webp">
+
+         <img src="img/college/landing/11th.webp">
+        <img src="img/college/landing/13th.webp">
+        <img src="img/college/landing/14th.webp">
+        <img src="img/college/landing/12th.webp">
+        <img src="img/college/landing/15th.webp">
+
+
+      </div>
+    </div>
+
   </div>
+</div>
 </section>
 
 <section class="sticky-marquee-bg">
@@ -2041,28 +2206,28 @@ text-align:center;
 <section class="vs-section">
   <div class="vs-container">
     <div class="vs-title">
-      <h2>From Campus to Career Excellence</h2>
-      <p>Your bridge from learning to earning with TalentYug.</p>
+      <h2>Redefining Campus Placements</h2>
+      <p>Making hiring smarter, faster, and more transparent with TalentYug.</p>
     </div>
     <div class="vs-mobile-scale">
     <div class="vs-layout">
-      <img src="img/students/problem.png" alt="Left Image" class="left-big">
-      <img src="img/students/Solution.png" alt="Right Image" class="right-big">
+      <img src="img/college/prblm_c.png" alt="Left Image" class="left-big">
+      <img src="img/college/Solution.png" alt="Right Image" class="right-big">
       <div class="center-line"></div>
       <div class="vs-badge">VS</div>
       <div class="left-dots">
-        <img src="img/students/1st.png" alt="Manual Placement" class="ld1">
-        <img src="img/students/5th.png" alt="Analytics" class="ld2">
-        <img src="img/students/3rd.png" alt="Weak Network" class="ld3">
-        <img src="img/students/4th.png" alt="50-60 Pace" class="ld4">
-        <img src="img/students/2nd.png" alt="Unstructured Student" class="ld5">
+        <img src="img/college/1st_c.png" alt="Manual Placement" class="ld1">
+        <img src="img/college/2nd_c.png" alt="Analytics" class="ld2">
+        <img src="img/college/3rd_c.png" alt="Weak Network" class="ld3">
+        <img src="img/college/4th_c.png" alt="50-60 Pace" class="ld4">
+        <img src="img/college/5th_c.png" alt="Unstructured Student" class="ld5">
       </div>
       <div class="right-dots">
-        <img src="img/students/1st_s.png" alt="Strategic 7 Step Process" class="rd1">
-        <img src="img/students/5th_s.png" alt="RealTime Analytics" class="rd2">
-        <img src="img/students/3rd_s.png" alt="Unified Digital Platform" class="rd3">
-        <img src="img/students/4th_s.png" alt="AI Powered Matching" class="rd4">
-        <img src="img/students/2nd_s.png" alt="Integrated Interview" class="rd5">
+        <img src="img/college/1st_cs.png" alt="Strategic 7 Step Process" class="rd1">
+        <img src="img/college/2nd_cs.png" alt="RealTime Analytics" class="rd2">
+        <img src="img/college/3rd_cs.png" alt="Unified Digital Platform" class="rd3">
+        <img src="img/college/4th_cs.png" alt="AI Powered Matching" class="rd4">
+        <img src="img/college/5th_cs.png" alt="Integrated Interview" class="rd5">
       </div>
     </div>
     </div>
@@ -2081,22 +2246,22 @@ text-align:center;
     <div class="features-left">
 
       <div class="feature-card light-card">
-        <h3>Notifications &<br> Alerts</h3>
+        <h3>Student<br> Management</h3>
         <ul>
-          <li> Interview scheduled → Get notification</li>
-          <li>Offer received → Get notification</li>
-          <li>New job matching skills → Get alert </li>
-          <li>Company updates → Get notification</li>
+          <li>Upload student database (CSV import)</li>
+          <li>Student profiles (CGPA, skills, preferences)</li>
+          <li>Batch management</li>
+          <li>Search & filter students</li>
         </ul>
       </div>
 
       <div class="feature-card lighter-card">
-        <h3>Interview Preparation</h3>
+        <h3>Interview Scheduling</h3>
         <ul>
-          <li>Practice mock interviews (role-specific)</li>
-          <li>Get instant AI feedback</li>
-          <li>Access interview tips & resources</li>
-          <li>Submit questions to TalentYug team</li>
+          <li>Auto-sync with company calendars </li>
+          <li>Reminder notifications for students </li>
+          <li>Drive management</li>
+          <li>Attendance tracking </li>
         </ul>
         <img src="img/sofa.webp" alt="Sofa Image" srcset="">
       </div>
@@ -2107,34 +2272,35 @@ text-align:center;
     <div class="features-right">
 
       <div class="feature-card dark-card large-card">
-        <h3> Job Discovery</h3>
+        <h3>Company Network</h3>
         <ul>
-          <li>Browse all open positions</li>
-          <li>Filter by role, company, salary, location</li>
-          <li>Save jobs to favourites</li>
-          <li>Get job recommendations (AI based)</li>
+          <li>View all connected companies</li>
+          <li>Company details & hiring history</li>
+          <li>Job openings from each company</li>
+          <li>Company feedback on students </li>
         </ul>
       </div>
 
       <div class="features-row">
 
         <div class="feature-card mid-card">
-          <h3>Profile & Applications</h3>
+          <h3>Real-time Analytics</h3>
           <ul>
-            <li>View/edit student profile</li>
-            <li>See all applications (status: pending, interviewed, offered, rejected)</li>
-            <li>Upload resume/projects</li>
-            <li>Update skills & certifications </li>
+            <li>Placement funnel</li>
+            <li>Conversion rates </li>
+            <li>Average salary by role/company </li>
+            <li>Placement timeline tracking </li>
+            <li>Department-wise breakdown </li>
           </ul>
         </div>
 
         <div class="feature-card teal-card">
-          <h3>Offers & Acceptance</h3>
+          <h3>Reporting & Exports</h3>
           <ul>
-            <li>View all received offers</li>
-            <li>Compare offers (salary, role, benefits)</li>
-            <li>Accept/reject offers</li>
-            <li>Download offer letter</li>
+            <li>Annual placement reports (PDF)</li>
+            <li>Student outcome tracking</li>
+            <li>Salary certificates</li>
+            <li>AICTE/NAAC compliance reports</li>
           </ul>
         </div>
       </div>
@@ -2156,11 +2322,11 @@ text-align:center;
 <div class="step-header">
   <img src="img/students/step1_s.png" alt="Step 1 Icon" class="step-icon">
        
-      <h3>Sign Up</h3>
+      <h3>Onboard Your College</h3>
       </div>
       <p>
-       Student registers with email/college - Completes profile - Full name, email, phone - College, batch year, CGPA - Skills & certifications - Location preferences - Salary expectations
-      </p>
+      TPO registers + uploads student data -  <br>Basic
+    college info - <br>Student database structure <br>
     </div>
 
     <!-- STEP 2 -->
@@ -2169,10 +2335,10 @@ text-align:center;
 
 <div class="step-header">
   <img src="img/students/step2_s.png" alt="Step 2 Icon" class="step-icon">
-      <h3>Browse Opportunities</h3>
+      <h3>Connect with Companies</h3>
       </div>
       <p>
-       View job listings from 50+ companies - Filter by role, salary, location, skills - See job details + company info - Apply with 1-click (auto-filled profile)
+      We bring 50+ pre-vetted companies - <br>Companies post job requirements - <br> Structured templates
       </p>
     </div>
 
@@ -2182,10 +2348,10 @@ text-align:center;
 
 <div class="step-header">
   <img src="img/students/step3_s.png" alt="Step icon 3" class="step-icon">
-      <h3>Prepare for Interview</h3>
+      <h3>AI Matches Students</h3>
       </div>
       <p>
-        Access mock interview platform - Practice with role-specific questions - Get AI-generated feedback - Access interview tips & resources - View tips from TalentYug blog
+       Our algorithm analyzes student profiles - <br> Matches students to relevant roles - <br> NOT mass blast - precision matching
       </p>
     </div>
 
@@ -2195,10 +2361,10 @@ text-align:center;
 
 <div class="step-header">
   <img src="img/students/step4_s.png" alt="Step 4 Icon" class="step-icon">
-      <h3>Interview</h3>
+      <h3>Students Apply</h3>
       </div>
       <p>
-        Receive interview notification - Interview link provided (video call integration) - Interview conducted with company - Feedback visible after (from interviewer)
+       Students see role-matched opportunities - <br>Apply with 1-click - <br> Access preparation resources
       </p>
     </div>
 
@@ -2208,10 +2374,10 @@ text-align:center;
 
 <div class="step-header">
   <img src="img/students/step5_s.png" alt="Step 5 Icon" class="step-icon">
-      <h3>Get Offer</h3>
+      <h3>Interview Management</h3>
       </div>
       <p>
-        Receive offer via platform - Accept/reject offer - View offer details (role, salary, joining date, benefits) - Download offer letter
+        Companies conduct interviews via platform - <br> TPO tracks progress in real-time - <br>Interview schedules auto-sync
       </p>
     </div>
 
@@ -2221,11 +2387,21 @@ text-align:center;
 
 <div class="step-header">
   <img src="img/students/step6_s.png" alt="Step 6 Icon" class="step-icon">
-      <h3>Track Progress</h3>
+      <h3>Offer & Acceptance</h3>
       </div>
       <p>
-        Application status tracker - <br> Interview feedback review - <br>Accepted offer details - <br>Post-hire onboarding support
+        Companies send offer via platform - <br> Students accept/reject -<br>Placement confirmed + salary documented<br>
       </p>
+    </div>
+    <!-- Step 7 -->
+    <div class="step-card step7">
+     <div class="step-label">Step-7</div>
+
+<div class="step-header">
+  <img src="img/students/step6_s.png" alt="Step 7 Icon" class="step-icon">
+      <h3>Analytics & Reporting</h3>
+      </div>
+      <p>TPO sees placement funnel - <br> Conversion rates by company/role - <br>Student salary distributions - <br>Export reports for annual reporting</p>
     </div>
 
   </div>
@@ -2234,14 +2410,14 @@ text-align:center;
 
   <path d="M350 240 H999" />
   <path d="M1060 250 V410" />
-  <path d="M1060 410 H250" />
-  <path d="M250 412 V549" />
-  <path d="M280 590 H990" />
-  <path d="M1060 600 V770" />
-  <path d="M1060 770 H650" />
+  <path d="M1060 410 H350" />
+  <path d="M350 412 V549" />
+  <path d="M280 590 H1090" />
+  <path d="M1090 590 V790" />
+  <path d="M1060 770 H350" />
 
   <!-- Moving Signal Dot -->
-  <circle id="signalDot" r="9" fill="#F31642" />
+  <circle id="signalDot" r="9" fill="#CFAE74" />
 
 </svg>
 
@@ -2257,7 +2433,7 @@ text-align:center;
 <!-- Pricing plans -->
 <section class="pricing-section" id="priceplan">
 
-  <h1 class="pricing-bg-text">Resources</h1>
+  <h1 class="pricing-bg-text">Pricing plans</h1>
 
   <div class="pricing-wrapper">
 
@@ -2265,19 +2441,20 @@ text-align:center;
     <div class="price-card">
       <div class="up">
       <div class="price-top mint">
-        <div class="plan-badge">Mock Interview</div>
-        <h3>Practice Interviews</h3></div>
+        <div class="plan-badge">Starter </div>
+        <h3>₹2L / year</h3></div>
         <div class="caption">
-        <p class="price-sub">Real interview simulation</p>
-      <a href="register.html" target="_blank" class="cta1">Start Practice</a>
+        <p class="price-sub">Best for small colleges</p>
+      <a href="register.html" target="_blank" class="cta1">Get Started</a>
       </div>
       </div>
       <div class="price-bottom">
         <ul>
-          <li>Role-specific questions (SE, PM, Sales)</li>
-          <li>AI feedback on answers</li>
-          <li>Unlimited practice</li>
-          <li>Interview timer simulation</li>
+          <li>College Size: Under 500 students</li>
+          <li>Placement dashboard</li>
+          <li>Up to 20 company connections</li>
+          <li>Basic placement analytics</li>
+          <li>Email support</li>
         </ul>
       </div>
     </div>
@@ -2286,19 +2463,20 @@ text-align:center;
     <div class="price-card">
       <div class="up">
       <div class="price-top light-mint">
-        <div class="plan-badge">Preparation Guides</div>
-        <h3>Interview Tips</h3></div>
+        <div class="plan-badge"> Professional</div>
+        <h3>₹4L / year</h3></div>
         <div class="caption">
-        <p class="price-sub">Smart preparation resources</p>
-       <a href="register.html" target="_blank" class="cta2">Read Guides</a>
+        <p class="price-sub">Ideal for growing institutions</p>
+       <a href="register.html" target="_blank" class="cta2">Get Started</a>
         </div>
         </div>
       <div class="price-bottom">
         <ul>
-          <li>How to prepare for placements</li>
-          <li>Top 10 tech interview questions</li>
-          <li>Salary negotiation tips</li>
-          <li>First 30-day success guide</li>
+          <li>College Size: 500 – 2,000 students</li>
+          <li>Up to 50 company connections</li>
+          <li>Advanced analytics & reports</li>
+          <li>Priority support</li>
+          <li>Phone + Email support</li>
 
         </ul>
       </div>
@@ -2308,20 +2486,21 @@ text-align:center;
     <div class="price-card">
      <div class="up">
       <div class="price-top dark">
-        <div class="plan-badge">Company Insights</div>
-        <h3>Company Profiles</h3></div>
+        <div class="plan-badge"> Enterprise</div>
+        <h3>₹5–6L / year</h3></div>
         <div class="caption">
-        <p class="price-sub">Know before you apply</p>
-        <a href="register.html" target="_blank" class="cta3">Explore Companies</a>
+        <p class="price-sub">For large institutions & universities</p>
+        <a href="register.html" target="_blank" class="cta3">Get Started</a>
         </div>
         </div>
 
       <div class="price-bottom">
         <ul>
-          <li>Company overview</li>
-          <li>Interview process</li>
-          <li>Commonly asked questions</li>
-          <li>Real salary ranges from past hires</li>
+          <li>College Size: Above 2,000 students</li>
+          <li>Unlimited company connections</li>
+          <li>Custom analytics & reporting</li>
+          <li>Dedicated account manager</li>
+          <li>24/7 dedicated support</li>
 
         </ul>
       </div>
@@ -2350,7 +2529,7 @@ text-align:center;
 
 
     <div class="testimonial-side">
-      <img src="img/students/comma.png" alt="Comma Quote Icon" class="quote-img">
+      <img src="img/college/comma_c.png" alt="Comma Quote Icon" class="quote-img">
       <p class="side-text">
         What our customers are saying
       </p>
@@ -2497,7 +2676,7 @@ text-align:center;
 <section class="faq-section">
 
   <!-- Background Waves -->
-  <img src="img/students/designfaq.png" class="faq-bg" alt="FAQ Background Design"loading="lazy">
+  <img src="img/college/design_c.png" class="faq-bg" alt="FAQ Background Design"loading="lazy">
 
   <div class="faq-container">
 
@@ -2519,7 +2698,7 @@ text-align:center;
       <!-- FAQ ITEM -->
       <div class="faq-item active">
         <div class="faq-question">
-          <h2>How do I register?</h2>
+          <h2>How do we upload student data?</h2>
           <span class="faq-icon">−</span>
         </div>
         <div class="faq-answer">
@@ -2533,7 +2712,7 @@ text-align:center;
 
       <div class="faq-item">
         <div class="faq-question">
-          <h2>How many opportunities are available?</h2>
+          <h2>What companies are in your network?</h2>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
@@ -2546,7 +2725,7 @@ text-align:center;
 
       <div class="faq-item">
         <div class="faq-question">
-          <h2>How does the matching work?</h2>
+          <h2>How does the AI matching work?</h2>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
@@ -2559,7 +2738,7 @@ text-align:center;
 
       <div class="faq-item">
         <div class="faq-question">
-          <h2>How do I prepare for interviews?</h2>
+          <h2>What’s the implementation timeline?</h2>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
@@ -2572,7 +2751,7 @@ text-align:center;
 
       <div class="faq-item">
         <div class="faq-question">
-          <h2>What if I don’t get selected?</h2>
+          <h2>What support do you provide?</h2>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
@@ -2584,7 +2763,7 @@ text-align:center;
       </div>
       <div class="faq-item">
         <div class="faq-question">
-          <h2>Is there a fee to use?</h2>
+          <h2>Can we integrate with our existing systems?</h2>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
@@ -2613,7 +2792,7 @@ text-align:center;
 <!-- FOOTER SECTION -->
  <section class="footer-spacer" id="footer">
  <div class="footer-skyline">
-    <img src="img/students/footerr.png" alt="Footer Background Image">
+    <img src="img/college/footer_c.png" alt="Footer Background Image">
   </div>
 <section class="footer">
 
@@ -2636,7 +2815,7 @@ text-align:center;
         <h3>Quick Links</h3>
         <a href="#">For Colleges</a>
         <a href="https://abhay-8511.github.io/TalentYug/">For Companies</a>
-        <a href="#">For Students</a>
+        <a href="https://abhay-8511.github.io/TalentYug-student/">For Students</a>
         <a href="#footer">About US</a>
       </div>
 
